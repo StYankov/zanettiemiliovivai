@@ -1,0 +1,29 @@
+// Text meant only for screen readers. Addresses part of theme-check issue #840.
+// https://github.com/Automattic/_s/blob/master/style.css
+.screen-reader-text {
+	position: absolute !important;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px;
+	height: 1px;
+}
+
+.screen-reader-text:focus {
+	top: 5px;
+	left: 5px;
+	z-index: 100000; // Above WP toolbar.
+	display: block;
+	clip: auto !important;
+	width: auto;
+	height: auto;
+	padding: 15px 23px 14px;
+	border-radius: 3px;
+	background-color: #f1f1f1;
+	color: #21759b;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	font-weight: bold;
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: normal;
+	text-decoration: none;
+}

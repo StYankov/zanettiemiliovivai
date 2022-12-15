@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zm/product-grid",
+	"title": "Products Grid",
+	"category": "theme",
+	"parent": [],
+	"icon": "grid-view",
+	"description": "",
+	"keywords": [],
+	"version": "1.0.0",
+	"textdomain": "hlwp",
+    "attributes": {
+        "featured": {
+            "type": "boolean",
+            "default": true
+        },
+        "category": {
+            "type": ["string", "number"],
+            "default": 0
+        }
+	},
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./index.js"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "zm/container",
+  "title": "container",
+  "category": "zm",
+  "parent": [],
+  "description": "",
+  "keywords": [],
+  "version": "1.0.0",
+  "textdomain": "hlwp",
+  "attributes": {
+    "mobileNoPadding": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "editorScript": "file:./index.js"
+}

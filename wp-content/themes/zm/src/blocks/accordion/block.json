@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zm/accordion",
+	"title": "Accordion",
+	"category": "zm",
+	"parent": [],
+	"icon": "editor-ul",
+	"description": "",
+	"keywords": [],
+	"version": "1.0.0",
+	"textdomain": "hlwp",
+	"editorScript": "file:./index.js",
+    "editorStyle": "zm-accordion"
+}

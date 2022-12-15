@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "zm/category-item",
+  "title": "Category Item",
+  "category": "theme",
+  "parent": [],
+  "icon": "category",
+  "description": "",
+  "keywords": [],
+  "version": "1.0.0",
+  "textdomain": "hlwp",
+  "attributes": {
+    "categoryId": {
+      "type": [
+        "number",
+        "string"
+      ],
+      "default": 0
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

@@ -1,0 +1,229 @@
+/*
+  Frontend styles for gutenberg blocks
+*/
+
+/** === Base Color Palatte === */
+@each $color,
+$code in $foundation-palette {
+
+	.has-#{$color}-background-color {
+		background-color: $code;
+	}
+
+	.has-#{$color}-color {
+		color: $code;
+	}
+}
+
+/** === Button === */
+.wp-block-button {
+
+	// add general foundation button styling
+	.wp-block-button__link {
+		@extend .button;
+
+		@each $color,
+		$code in $foundation-palette {
+
+			&.has-#{$color}-background-color {
+				background-color: $code;
+			}
+
+			&.has-#{$color}-color {
+				color: $code;
+			}
+		}
+	}
+
+	// add special styling for squared buttons
+	&.is-style-squared .wp-block-button__link {
+		border-radius: 0;
+	}
+
+	// add outline styles
+	&.is-style-outline .wp-block-button__link {
+		@extend .hollow;
+	}
+}
+
+/** === File === */
+.wp-block-file .wp-block-file__button {
+	@include button();
+}
+
+/** === Gutenberg layout === */
+@mixin container-padding {
+
+	@each $breakpoint,
+	$size in $grid-container-padding {
+		@include breakpoint($breakpoint) {
+			padding-right: calc(#{$size} / 2);
+			padding-left: calc(#{$size} / 2);
+		}
+	}
+}
+
+body .wp-block-cover,
+body .wp-block-cover-image {
+	padding: 0;
+}
+
+body .entry-content {
+
+	@each $breakpoint,
+	$size in $grid-margin-gutters {
+
+		@include breakpoint($breakpoint) {
+			--wp--style--block-gap: #{$size};
+		}
+	}
+
+	ul,
+	ol {
+		position: relative;
+		left: $list-side-margin;
+	}
+}
+
+// .entry-content>*:not(.alignfull) {
+// 	max-width: $global-width;
+// 	margin-right: auto !important;
+// 	margin-left: auto !important;
+// 	@include container-padding;
+// }
+
+.entry-content>.alignwide {
+	max-width: 1600px;
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+
+.entry-content>.alignfull {
+	max-width: none;
+
+	.wp-block-group>* {
+		@include container-padding;
+	}
+}
+
+.entry-content>.alignleft {
+	display: flex;
+	align-items: flex-start;
+	margin-left: 0 !important;
+}
+
+.entry-content>.alignright {
+	display: flex;
+	align-items: flex-end;
+	margin-right: 0 !important;
+}
+
+.entry-content>.aligncenter {
+	display: flex;
+	align-items: center;
+}
+
+body a:where(:not(.wp-element-button)) {
+  text-decoration: none;
+}
+
+.heading-label {
+	display: inline-block;
+	padding: rem-calc(8 15) !important;	
+	border-radius: rem-calc(5);
+}
+
+.justify-center {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.collection-of-cactus {
+	letter-spacing: 2.5px;
+}
+
+.equal-height-columns {
+	@include breakpoint(medium) {
+		display: grid !important;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 20px;
+
+		.wp-block-column {
+			height: 100%;
+		}
+	}
+}
+
+.cover-rounded {
+	border-radius: rem-calc(10);
+	overflow: hidden;
+}
+
+.our-partners-section {
+	position: relative;
+	margin-top: rem-calc(-200);
+	z-index: 3;
+
+	.is-layout-flex {
+		@include breakpoint(medium down) {
+			padding-left: rem-calc(16);
+			padding-right: rem-calc(16);
+		}
+	}
+
+	.images-row {
+		@include breakpoint(medium down) {
+			flex-wrap: wrap !important;
+			gap: 0;
+
+			figure {
+				width: 33%;
+			}
+		}
+	}
+}
+
+.container-constrained {
+	max-width: rem-calc(1200) !important;
+	margin: 0 auto;
+}
+
+.image-constrained img {
+	max-height: rem-calc(500);
+	width: 100%;
+	object-fit: cover;
+}
+
+@include breakpoint(medium down) {
+    .reverse-mobile {
+        flex-direction: column-reverse;
+    }
+}
+
+.grid-container {
+	@include breakpoint(medium down) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+.grid-container.mp-0 {
+	@include breakpoint(medium down) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+.grid-container.medium-no-padding {
+	@include breakpoint(medium) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.our-latest-stories {
+	margin-top: rem-calc(-105);
+}

@@ -1,0 +1,43 @@
+.letter-spacing-25 {
+    letter-spacing: 2.5px;
+}
+
+.rounded-10 {
+    border-radius: rem-calc(10);
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.margin-top-2 {
+    margin-top: 2rem
+}
+
+.medium-col-1\/5 {
+    @include breakpoint(medium down) {
+        margin-bottom: rem-calc(26);
+    }
+
+    @include breakpoint(medium) {
+        @include grid-column(2.4); // (12/5 = 2.4)
+    }
+}
+
+.title-extra-large {
+    font-size: rem-calc(50);
+
+    @include breakpoint(medium) {
+        font-size: rem-calc(75);
+        line-height: rem-calc(90);
+    }
+
+    @include breakpoint(large) {
+        font-size: rem-calc(100);
+        line-height: rem-calc(120);
+    }
+}
+
+.bg-light-gray {
+    background-color: #F1F3F2;
+}

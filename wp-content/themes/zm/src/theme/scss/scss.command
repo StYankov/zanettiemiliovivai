@@ -1,0 +1,1 @@
+sass app.scss ../../../dist/css/style.css --load-path="../../" -w

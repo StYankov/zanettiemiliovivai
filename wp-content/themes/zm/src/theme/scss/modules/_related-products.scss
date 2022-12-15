@@ -1,0 +1,10 @@
+.related {
+    margin-bottom: rem-calc(20);
+    
+    &__heading {
+        text-transform: uppercase;
+        font-weight: 300;
+        color: $dark;
+        margin-bottom: rem-calc(35);
+    }
+}

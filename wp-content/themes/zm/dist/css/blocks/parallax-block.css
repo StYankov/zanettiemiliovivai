@@ -1,0 +1,66 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[3]!./theme/scss/blocks/parallax-block.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Foundation for Sites
+ * Version 6.7.4
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+.wp-block-zm-parallax-block {
+  height: 100%;
+}
+
+.image-block-parallax {
+  position: relative;
+  height: 100%;
+}
+.image-block-parallax__back {
+  height: 100%;
+}
+@media print, screen and (max-width: 63.99875em) {
+  .image-block-parallax__back {
+    height: 28.125rem;
+  }
+}
+.image-block-parallax__back img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem;
+  background-size: cover;
+}
+.image-block-parallax__front {
+  position: absolute;
+  top: -2.5rem;
+  bottom: -3.125rem;
+  right: -7.5rem;
+  left: 50%;
+}
+@media print, screen and (max-width: 63.99875em) {
+  .image-block-parallax__front {
+    display: flex;
+  }
+}
+.image-block-parallax__front img {
+  width: 90%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.image-block-parallax.position-front-left .image-block-parallax__front {
+  left: -7.5rem;
+  right: 50%;
+}
+@media print, screen and (max-width: 63.99875em) {
+  .image-block-parallax.position-front-left .image-block-parallax__front {
+    bottom: 0;
+    left: -4.375rem;
+  }
+}
+.image-block-parallax .simpleParallax {
+  overflow: visible !important;
+}
+
+/*# sourceMappingURL=parallax-block.css.map*/

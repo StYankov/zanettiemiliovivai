@@ -1,0 +1,72 @@
+/*!
+ * Gutenberg Editor Styles
+ */
+
+/** === Includes === */
+
+@charset 'utf-8';
+
+@import 'settings';
+@import 'node_modules/foundation-sites/scss/foundation';
+
+@include foundation-typography;
+@include foundation-button;
+@include foundation-table;
+
+@include foundation-xy-grid-classes;
+@include foundation-global-styles;
+
+/* === Custom files === */
+
+// Global
+@import 'global/accessibility';
+@import 'global/wp-admin';
+@import 'global/spacing';
+@import 'global/typography';
+// @import 'global/fonts';
+// @import 'global/forms';
+@import 'global/helpers';
+@import 'global/gutenberg';
+
+// Modules
+@import 'modules/navigation';
+@import 'modules/content';
+@import 'modules/footer';
+
+// Components
+@import 'components/buttons';
+@import 'components/links';
+
+// Components Blocks
+
+
+.block-editor-block-list__layout.is-root-container {
+	@extend .entry-content;
+
+	.alignleft,
+	.alignright {
+		float: unset !important;
+		width: 100%;
+	}
+}
+
+/** === Base Typography === */
+body {
+	color: $body-font-color;
+	font-size: $global-font-size;
+	font-family: $body-font-family;
+}
+
+/** === Post Title === */
+.editor-post-title__input {
+	@extend .h1;
+
+
+	@each $breakpoint,
+	$size in $grid-container-padding {
+		@include breakpoint($breakpoint) {
+			padding-right: calc(#{$size} / 2);
+			padding-left: calc(#{$size} / 2);
+		}
+	}
+}

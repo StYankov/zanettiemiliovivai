@@ -1,0 +1,132 @@
+.footer {
+    padding-top: rem-calc(40);
+    margin-top: rem-calc(20);
+    border-top: 1px solid #E7ECEA;
+
+    @include breakpoint(medium) {
+        padding-top: rem-calc(85);
+        margin-top: rem-calc(50);
+    }
+
+    .wp-block-image {
+        margin-bottom: rem-calc(15);
+    }
+
+    .footer-socials {
+        &__row {
+            display: flex;
+            margin-bottom: rem-calc(6);
+
+            i {
+                width: rem-calc(35);
+                padding-top: rem-calc(4);
+                padding-left: rem-calc(4);
+            }
+        }
+    }
+
+    .widget h4 {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: rem-calc(34);
+
+        @include breakpoint(medium down) {
+            margin-bottom: rem-calc(20);
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: rem-calc(16);
+        }
+
+        li::before {
+            content: '';
+            left: 0;
+            top: rem-calc(8);
+            width: rem-calc(7);
+            height: rem-calc(7);
+            border-radius: 50%;
+            background-color: $accent;
+            margin-right: rem-calc(8);
+        }
+
+        a {
+           padding: 0;
+           color: $dark-gray;
+        }
+    }
+}
+
+.post-footer {
+    background-color: #333333;
+    padding: rem-calc(50 20);
+    align-items: center;
+
+    @include breakpoint(medium) {
+        margin-bottom: rem-calc(40);
+        border-radius: rem-calc(10);
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+
+        li::before {
+            display: none !important;
+        }
+
+        li:first-child {
+            padding-right: rem-calc(6);
+
+            @include breakpoint(medium) {
+                padding-right: rem-calc(15);
+            }
+        }
+
+        li {
+            margin-bottom: 0;
+
+            @include breakpoint(medium down) {
+                margin-bottom: rem-calc(12);
+            }
+        }
+
+        li:not(:first-child) {
+            padding: rem-calc(0 6);
+            border-left: 1px solid #fff;
+
+            @include breakpoint(medium) {
+                padding: rem-calc(0 15);
+            }
+        }
+
+        li:last-child {
+            border-right: 0;
+        }
+
+        a {
+            color: #fff;
+
+        }
+    }
+
+    .payment-methods {
+        @include breakpoint(medium down) {
+            justify-content: flex-start !important;
+            margin-top: rem-calc(35);
+        }
+    }
+
+    .payment-methods .wp-block-image {
+        margin-bottom: 0 !important;
+    }
+}

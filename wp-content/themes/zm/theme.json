@@ -1,0 +1,145 @@
+{
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"devLabel": false,
+		"layout": {
+			"contentSize": "1200px",
+			"wideSize": "1600px",
+			"definitions": {
+				"flex": {
+					"baseStyles": [
+						{
+							"selector": "",
+							"rules": {
+								"flex-wrap": "wrap",
+								"align-items": "center"
+							}
+						},
+						{
+							"selector": " > *",
+							"rules": null
+						}
+					]
+				}
+			}
+		},
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#7BA53B",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#767676",
+					"name": "Secondary"
+				},
+				{
+					"slug": "light-gray",
+					"color": "#F1F3F2",
+					"name": "Light Gray"
+				},
+				{
+					"slug": "medium-gray",
+					"color": "#C3C3C3",
+					"name": "Medium Gray"
+				},
+				{
+					"slug": "dark-gray",
+					"color": "#959595",
+					"name": "Dark Gray"
+				},
+				{
+					"slug": "dark",
+					"color": "#333333",
+					"name": "Dark"
+				},
+				{
+					"slug": "black",
+					"color": "#0a0a0a",
+					"name": "Black"
+				},
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
+				}
+			]
+		},
+		"typography": {
+			"fontSizes": [
+				{
+					"slug": "headingone",
+					"size": "48px",
+					"name": "~H1"
+				},
+				{
+					"slug": "headingtwo",
+					"size": "40px",
+					"name": "~H2"
+				},
+				{
+					"slug": "headingthree",
+					"size": "31px",
+					"name": "~H3"
+				},
+				{
+					"slug": "headingfour",
+					"size": "25px",
+					"name": "~H4"
+				},
+				{
+					"slug": "headingfive",
+					"size": "20px",
+					"name": "~H5"
+				},
+				{
+					"slug": "headingsix",
+					"size": "16px",
+					"name": "~H6"
+				}
+			]
+		},
+		"spacing": {
+			"margin": false,
+			"padding": false,
+			"blockGap": true
+		},
+		"gutenberg": {
+			"blocks": {
+				"path": "library/blocks",
+				"autoload": [
+					"build/jumbotron",
+					"build/spacing",
+					"build/parallax-block",
+					"build/accordion",
+					"build/accordion-item",
+					"build/container"
+				],
+				"dynamic_blocks": {
+					"build/category-item": {
+						"include_php": true,
+						"callback": "zm_category_item_render"
+					},
+					"build/product-grid-tabs": {
+						"include_php": true,
+						"callback": "zm_product_grid_tabs_render"
+					},
+					"build/product-grid": {
+						"include_php": true,
+						"callback": "zm_product_grid_render"
+					}
+				}
+			}
+		}
+	},
+	"styles": {
+		"spacing": {
+			"blockGap": "25px"
+		}
+	}
+}

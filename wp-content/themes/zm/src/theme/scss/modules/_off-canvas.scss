@@ -1,0 +1,44 @@
+.mobile-off-canvas-menu {
+    width: rem-calc(300);
+    background-color: #fff;
+
+    .menu-close {
+        font-size: rem-calc(36);
+    }
+
+    .menu {
+        li a {
+            font-size: rem-calc(16);
+            font-weight: 300;
+            color: $dark;
+        }
+
+        li.is-active a {
+            background-color: transparent;
+            font-weight: 600;
+        }
+    }
+
+    .menu-item-has-children a {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        .menu-item-parent-toggle {
+            transform: rotateZ(90deg);
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    li.toggled .menu-item-parent-toggle {
+        transform: rotateZ(0deg);
+    }
+
+    .nested.menu {
+        display: none;
+        margin-left: 0;
+        padding-left: rem-calc(35);
+        background-color: #F4F5F6;
+    }
+}

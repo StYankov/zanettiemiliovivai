@@ -1,0 +1,11 @@
+.accordion {
+    border-radius: 10px;
+
+    .accordion-title {
+        font-family: Khand;
+        font-size: rem-calc(20);
+        text-transform: uppercase;
+        font-weight: 300;
+        color: $dark;
+    }
+}

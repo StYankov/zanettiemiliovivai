@@ -1,0 +1,33 @@
+{
+	"version": 1,
+	"settings": {
+		"browserSync": {
+			"host": "localhost",
+			"proxy": "http://XXXX",
+			"port": 3234
+		},
+		"syncData": {
+			"hostname": "10.0.10.3",
+			"username": "YYYYYY",
+			"destPathUploads": ":/var/www/XXXX/htdocs/content/uploads/",
+			"destPathPlugins": ":/var/www/XXXX/htdocs/content/plugins/",
+			"destPathLang": ":/var/www/XXXX/htdocs/content/languages/",
+			"destPathContent": ":/var/www/XXXX/htdocs/content/",
+			"destPathTheme": ":/var/www/XXXX/htdocs/content/themes/",
+			"port": "22",
+			"ssh": true,
+			"exclude": [
+				".htaccess",
+				"node_modules",
+				".DS_Store",
+				".git",
+				".github",
+				"backupbuddy_backups",
+				"pb_backupbuddy",
+				".sass-cache",
+				"cache",
+				"error_log"
+			]
+		}
+	}
+}

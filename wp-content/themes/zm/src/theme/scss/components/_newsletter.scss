@@ -1,0 +1,126 @@
+.newsletter {
+    padding-left: rem-calc(20);
+    padding-right: rem-calc(20);
+    padding-top: rem-calc(80);
+    padding-bottom: rem-calc(60);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: rem-calc(10);
+    background-image: url(../images/green-background.webp);
+    margin-bottom: rem-calc(50);
+
+    .subscribe {
+        color: #fff;
+        line-height: rem-calc(70);
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2.5px;
+        margin-bottom: 0;
+
+        @include breakpoint(medium down) {
+            line-height: 1.5;
+        }
+    }
+
+    .why-subscribe {
+        color: #fff;
+        font-weight: 300;
+        margin-bottom: 0;
+        
+        @include breakpoint(medium down) {
+            margin-bottom: rem-calc(20);
+        }
+    }
+
+    .cell {
+        display: flex;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .mc4wp-form-fields {
+        display: flex;
+        align-items: center;
+
+        input[type="email"] {
+            height: rem-calc(50);
+            border-radius: rem-calc(10);
+            padding-left: rem-calc(30);
+            padding-right: rem-calc(10);
+            border: 1px solid #dfe5e8ff;
+            background-color: #f4f6f7ff;
+            color: $dark;
+            margin-right: rem-calc(24);
+            margin-bottom: 0;
+        }
+
+        input[type="submit"] {
+            border: 0;
+            min-height: 50px;
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 10px;
+            font-size: rem-calc(24);
+            padding: rem-calc(0 10);
+            letter-spacing: 0.9px;
+            transition: 0.3s ease-out;
+            min-width: rem-calc(150);
+            font-weight: 500;
+
+            &:hover {
+                background-color: #fff;
+                color: $accent;
+            }
+        }
+    }
+}
+
+.subscribe {
+    .mc4wp-form {
+        width: 85%;
+        margin: 0 auto;
+
+        input[type="email"] { 
+            width: 100%;
+            height: 50px;
+            font-size: rem-calc(16);
+            color: $dark-gray;
+            text-align: center;
+            border-radius: rem-calc(10);
+            border: 0;
+            margin-bottom: rem-calc(20);
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .button {
+            width: 100%;
+            border-radius: rem-calc(10);
+            height: rem-calc(50);
+            border: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: rem-calc(24);
+            text-align: center;
+            padding-top: 0;
+            padding-bottom: 0;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $dark;
+                border-color: $dark;
+                color: $accent;
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+.woocommerce #reviews {
+    #comments {
+        h4 {
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: rem-calc(40);
+        }
+
+        ol.commentlist li .comment-text {
+            margin-left: 0;
+            border: 0;
+            padding: 0;
+
+            .star-rating::before {
+                color: $dark;
+            }
+            
+            .star-rating span::before {
+                color: $dark;
+            }
+
+            p.meta {
+                display: flex;
+                flex-direction: column;
+
+                .woocommerce-review__dash {
+                    display: none;
+                }
+            }
+
+            .woocommerce-review__author {
+                font-weight: bold;
+                font-size: rem-calc(14);
+                font-family: 'Khand';
+                color: $dark;
+            }
+
+            .description {
+                color: $dark-gray;
+                
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    #reply-title {
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: rem-calc(40);
+        line-height: 1.1;
+    }
+
+    .comment-form {
+        label {
+            color: $dark-gray;
+            font-size: rem-calc(16);
+        }
+
+        p.stars a::before {
+            content: "\e020";
+            color: #b6c6c9;  
+        }
+
+        p.stars.selected a:not(.active)::before {
+            color: #ffc107;
+        }
+
+        p.stars.selected a.active::before {
+            color: #ffc107;
+        }
+
+        p.stars.selected a.active~a::before {
+            color: #b6c6c9;
+        }
+
+        #comment {
+            height: rem-calc(120);
+            box-shadow: none;
+            border-radius: 3px;
+            padding: rem-calc(10 15);
+            border: 1px solid #dfe5e8;
+        }
+
+        input[type=text], input[type=email] {
+            box-shadow: none;
+            border-radius: 3px;
+            padding: rem-calc(8);
+            border: 1px solid #dfe5e8;
+            margin-bottom: rem-calc(15);
+        }
+
+        input#submit {
+            background-color: $accent;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: 'Khand';
+            font-size: rem-calc(15);
+            font-weight: bold;
+            letter-spacing: 0.85px;
+            padding: rem-calc(12 20);
+        }
+    }
+}

@@ -1,0 +1,269 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: HlebarovPress\n"
+"POT-Creation-Date: 2022-10-24 14:47+0300\n"
+"PO-Revision-Date: 2022-10-24 14:47+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: 404.php:17
+msgid "File Not Found"
+msgstr ""
+
+#: 404.php:20
+msgid ""
+"The page you are looking for might have been removed, had its name changed, "
+"or is temporarily unavailable."
+msgstr ""
+
+#: 404.php:22
+msgid "Please try the following:"
+msgstr ""
+
+#: 404.php:25
+msgid "Check your spelling"
+msgstr ""
+
+#: 404.php:31
+#, php-format
+msgid "Return to the <a href=\"%s\">home page</a>"
+msgstr ""
+
+#: 404.php:37
+msgid "Click the <a href=\"javascript:history.back()\">Back</a> button"
+msgstr ""
+
+#: 404.php:41
+msgid "Search for something:"
+msgstr ""
+
+#: archive.php:43 index.php:41 search.php:47
+msgid "&larr; Older posts"
+msgstr ""
+
+#: archive.php:44 index.php:42 search.php:48
+msgid "Newer posts &rarr;"
+msgstr ""
+
+#: comments.php:26
+msgid "Reply"
+msgstr ""
+
+#: comments.php:35 library/class-hlebarovpress-comments.php:87
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comments.php:55
+msgid "Please do not load this page directly. Thanks!"
+msgstr ""
+
+#: comments.php:60
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: header.php:35
+msgid "Main Menu"
+msgstr ""
+
+#: library/class-hlebarovpress-comments.php:28
+msgid "No Responses to"
+msgstr ""
+
+#: library/class-hlebarovpress-comments.php:28
+msgid "One Response to"
+msgstr ""
+
+#: library/class-hlebarovpress-comments.php:28
+msgid "% Responses to"
+msgstr ""
+
+#: library/class-hlebarovpress-comments.php:74
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr ""
+
+#: library/custom-nav.php:20
+msgid "Mobile Menu Settings"
+msgstr ""
+
+#: library/custom-nav.php:21
+msgid "Off-canvas or Top bar"
+msgstr ""
+
+#: library/custom-nav.php:29
+msgid "Mobile navigation layout"
+msgstr ""
+
+#: library/custom-nav.php:39
+msgid "offcanvas"
+msgstr ""
+
+#: library/foundation.php:84
+msgid "&laquo;"
+msgstr ""
+
+#: library/foundation.php:85
+msgid "&raquo;"
+msgstr ""
+
+#: library/foundation.php:151
+#, php-format
+msgid ""
+"Please assign a menu to the primary menu location under %1$s or %2$s the "
+"design."
+msgstr ""
+
+#: library/foundation.php:154
+#, php-format
+msgid "<a href=\"%s\">Menus</a>"
+msgstr ""
+
+#: library/foundation.php:159
+#, php-format
+msgid "<a href=\"%s\">Customize</a>"
+msgstr ""
+
+#: library/gutenberg.php:17
+msgid "HLWP"
+msgstr ""
+
+#: library/navigation.php:13
+msgid "Right Top Bar"
+msgstr ""
+
+#: library/navigation.php:14
+msgid "Footer"
+msgstr ""
+
+#: library/navigation.php:15
+msgid "Mobile"
+msgstr ""
+
+#: library/navigation.php:76
+msgid "mobile-nav"
+msgstr ""
+
+#: library/widget-areas.php:16
+msgid "Sidebar widgets"
+msgstr ""
+
+#: library/widget-areas.php:17
+msgid "Drag widgets to this sidebar container."
+msgstr ""
+
+#: search.php:22
+msgid "<span class=\"search-terms\">"
+msgstr ""
+
+#: search.php:24
+msgid "results for "
+msgstr ""
+
+#: search.php:28
+msgid "</span>"
+msgstr ""
+
+#: searchform.php:14 searchform.php:16
+msgid "Search"
+msgstr ""
+
+#: src/blocks/spacing/index.js:67
+msgid "Default"
+msgstr ""
+
+#: src/blocks/spacing/index.js:71
+msgid "None"
+msgstr ""
+
+#: src/blocks/spacing/index.js:75
+msgid "Extra Small"
+msgstr ""
+
+#: src/blocks/spacing/index.js:79
+msgid "Small"
+msgstr ""
+
+#: src/blocks/spacing/index.js:83
+msgid "Medium"
+msgstr ""
+
+#: src/blocks/spacing/index.js:87
+msgid "Large"
+msgstr ""
+
+#: src/blocks/spacing/index.js:91
+msgid "Extra Large"
+msgstr ""
+
+#: src/blocks/spacing/index.js:193
+msgid "Block Spacing"
+msgstr ""
+
+#: src/blocks/spacing/index.js:195
+msgid "Margin Top"
+msgstr ""
+
+#: src/blocks/spacing/index.js:205
+msgid "Padding Top"
+msgstr ""
+
+#: src/blocks/spacing/index.js:215
+msgid "Margin Bottom"
+msgstr ""
+
+#: src/blocks/spacing/index.js:225
+msgid "Padding Bottom"
+msgstr ""
+
+#: template-parts/content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:25
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:33
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:38
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/mobile-off-canvas.php:14
+msgid "Close Menu"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "HlebarovPress"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Modern starter theme for WordPress"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Hlebarov.com"
+msgstr ""

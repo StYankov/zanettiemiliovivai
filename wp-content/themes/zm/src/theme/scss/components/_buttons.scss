@@ -1,0 +1,13 @@
+.wp-element-button {
+    padding: rem-calc(13 25) !important;
+    border: 2px solid $dark;
+    line-height: rem-calc(46);
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: $dark !important;
+        border-color: $dark !important;
+        color: $white !important;
+    }
+}

@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zm/parallax-block",
+	"title": "Parallax Block",
+	"category": "theme",
+	"parent": [],
+	"icon": "format-gallery",
+	"description": "",
+	"keywords": [],
+	"version": "1.0.0",
+	"textdomain": "hlwp",
+    "attributes": {
+        "backFaceImageId": {
+            "type": ["string", "number"]
+        },
+		"backFaceImageUrl": {
+			"type": "string"
+		},
+        "frontFaceImageId": {
+            "type": ["string", "number"]
+        },
+        "frontFaceImageUrl": {
+            "type": "string"
+        },
+        "frontImagePosition": {
+            "type": "string",
+			"default": "front-right"
+        }
+	},
+	"editorScript": "file:./index.js",
+	"viewScript": "zm-rellax"
+}

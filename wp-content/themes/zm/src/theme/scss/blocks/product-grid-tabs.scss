@@ -1,0 +1,109 @@
+@charset 'utf-8';
+
+@import '../settings';
+@import 'node_modules/foundation-sites/scss/foundation';
+@import '../components/product-mini';
+
+.product-grid-tabs {
+    &__header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: rem-calc(35);
+
+        @include breakpoint(medium) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e7ecea;
+            margin-bottom: rem-calc(50);
+        }
+
+        h4 {
+            text-transform: uppercase;
+            color: $dark;
+            font-weight: 500;
+            margin-bottom: 0;
+
+            @include breakpoint(medium down) {
+                border-bottom: 1px solid #e7ecea;
+                margin-bottom: rem-calc(30);
+                padding-bottom: rem-calc(8);
+            }
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        align-items: flex-end;
+        list-style: none;
+        margin: 0;
+
+        @include breakpoint(medium down) {
+            justify-content: center;
+        }
+
+        li {
+            position: relative;
+            font-family: 'Khand';
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            color: $dark;
+            border-bottom: 2px solid transparent;
+            padding-bottom: rem-calc(6);
+            text-transform: uppercase;
+            letter-spacing: 0.85px;
+            margin-right: rem-calc(30);
+        }
+
+        li.active::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $dark;
+        }
+    }
+
+    &__grid {
+        display: none;
+
+        &.active {
+            display: flex;
+        }
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: var(--a-delay, 0s);
+}
+
+@-webkit-keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.fade-in-down {
+    animation-name: fadeInDown;
+}

@@ -1,0 +1,44 @@
+{
+	"name": "hlebarovpress",
+	"version": "1.0.0",
+	"description": "HlebarovPress theme by Hlebarov",
+	"main": "index.js",
+	"scripts": {
+		"start": "npm run start:blocks & npm run start:theme",
+		"start:blocks": "wp-scripts start  --webpack-src-dir=blocks/ --webpack-copy-php --output-path=../library/blocks/build",
+		"start:theme": "wp-scripts start  --webpack-src-dir=theme/ --config=theme/webpack.config.js",
+		"build": "npm run build:blocks && npm run build:theme",
+		"build:blocks": "wp-scripts build  --webpack-src-dir=blocks/ --webpack-copy-php --output-path=../library/blocks/build",
+		"build:theme": "wp-scripts build  --webpack-src-dir=theme/ --config=theme/webpack.config.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"bin": {
+		"hlwp": "./.cli/index.js"
+	},
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^12.4.0",
+		"@wordpress/i18n": "^4.10.0",
+		"@wordpress/scripts": "23.5.0",
+		"browser-sync-webpack-plugin": "^2.3.0",
+		"copy-webpack-plugin": "^10.2.4",
+		"gulp": "^4.0.2",
+		"rsyncwrapper": "^3.0.1",
+		"stylelint": "^13.8.0",
+		"stylelint-config-hudochenkov": "^5.0.0",
+		"stylelint-order": "^4.1.0"
+	},
+	"dependencies": {
+		"@wordpress/block-editor": "^10.5.0",
+		"@wordpress/blocks": "^11.21.0",
+		"@wordpress/editor": "^12.21.0",
+		"@wordpress/element": "^4.20.0",
+		"browser-sync": "^2.27.10",
+		"foundation-sites": "6.7.4",
+		"jquery": "^3.6.0",
+		"lodash": "^4.17.21",
+		"motion-ui": "^2.0.3",
+		"node-sass": "^7.0.3",
+		"sass": "^1.39.2"
+	}
+}

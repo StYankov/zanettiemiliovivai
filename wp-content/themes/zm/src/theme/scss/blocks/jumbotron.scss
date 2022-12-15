@@ -1,0 +1,102 @@
+@charset 'utf-8';
+
+@import '../settings';
+@import 'node_modules/foundation-sites/scss/foundation';
+
+.wp-block-zm-jumbotron .jumbotron {
+    padding: rem-calc(130 45);     
+    border-radius: rem-calc(10);
+    background-size: cover;
+    margin-bottom: rem-calc(40);
+
+    @include breakpoint(medium) {
+        padding: rem-calc(180 72);     
+    }
+
+    &__inner {
+        position: relative;
+        border-radius: rem-calc(10);
+        border: 4px solid $white;
+        border-bottom: 0;
+    }
+
+    &__title {
+        font-size: rem-calc(50);
+        padding: rem-calc(50 5);
+        padding-bottom: rem-calc(75);
+        color: $white;
+        letter-spacing: 2.5px;
+        text-align: center;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        @include breakpoint(medium) {
+            font-size: rem-calc(100);
+            padding-top: rem-calc(65);
+            padding-bottom: rem-calc(40);
+        }
+
+        @include breakpoint(large) {
+            font-size: rem-calc(130);
+        }
+    }
+
+    &__heading {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        background-color: $green;
+        padding: rem-calc(8 24);
+        border-radius: rem-calc(10);
+        text-transform: uppercase;
+        color: $white;
+        white-space: nowrap;
+
+        @include breakpoint(medium down) {
+            font-size: rem-calc(16);
+            font-weight: 500;
+        }
+    }
+
+    &__footer {
+        position: absolute;
+        top: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transform: translateY(-50%) translateY(-2px);
+    }
+
+    &__line {
+        flex: 1;
+        height: rem-calc(4);
+        background-color: $white;
+        width: 100%;
+        border-bottom-left-radius: rem-calc(4);
+
+        @include breakpoint(medium down) {
+            min-width: rem-calc(25);
+        }
+    }
+
+    &__line.right {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: rem-calc(4);
+    }
+
+    &__subtitle.h1 {
+        padding: rem-calc(0 35);
+        text-transform: uppercase;
+        color: $white;
+        letter-spacing: 2.5px;
+        font-weight: 400;
+        text-align: center;
+
+        @include breakpoint(medium down) {
+            padding: rem-calc(0 25);
+            line-height: 1.1;
+        }
+    }
+}

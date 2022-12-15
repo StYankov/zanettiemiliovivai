@@ -1,0 +1,102 @@
+.wp-block-handpicked-products {
+    width: 100%;
+
+    &.has-6-columns .wc-block-grid__products {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: rem-calc(36);
+    }
+
+    &.has-5-columns .wc-block-grid__products {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: rem-calc(46);
+    }
+
+    &.has-4-columns .wc-block-grid__products {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: rem-calc(55);
+    }
+
+    .wc-block-grid__products {
+        width: 100%;
+        margin: 0;
+
+        @include breakpoint(medium down) {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+        }
+    }
+
+    .wc-block-grid__product {
+        border: 0;
+        box-shadow: 0 2px rem-calc(55) rgba(0, 0, 0, 0.11);
+        border-radius: rem-calc(10);
+        width: 100%;
+        max-width: 100% !important;
+
+        &-title {
+            color: $dark;
+            letter-spacing: 0.85px;
+            text-transform: uppercase;
+            font-size: rem-calc(17);
+            font-family: 'Khand';
+            font-weight: 500;
+            margin-bottom: rem-calc(5) !important;
+            transition: 0.3s ease-out;
+        }
+
+        &-price {
+            margin-bottom: rem-calc(15) !important;
+            color: $green;
+            font-size: rem-calc(17);
+            font-weight: 300;
+
+            del {
+                opacity: 0.5;
+                font-size: 0.9rem;
+            }
+
+            ins {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .wc-block-grid__product:hover .wc-block-grid__product-title {
+        color: $green;
+    }
+
+    .wc-block-grid__product-onsale {
+        position: absolute;
+        top: rem-calc(12);
+        left: rem-calc(-6);
+        font-size: rem-calc(11);
+        background-color: $green;
+        padding: rem-calc(5 7);
+        border-radius: rem-calc(3);
+        border-bottom-left-radius: 0;
+        border: 0;
+        color: $white;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            border-right-width: 6px;
+            border-right-style: solid;
+            border-bottom: 6px solid transparent;
+            filter: brightness(80%);
+            border-left-color: $green;
+            border-right-color: $green;
+        }
+    }
+}

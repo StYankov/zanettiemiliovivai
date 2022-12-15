@@ -1,0 +1,76 @@
+// Spacing classes dependant on the gutters
+$spacing-steps: (
+	none: 0,
+	xsmall: 0.5,
+	small: 1,
+	medium: 1.8,
+	large: 2.6,
+	xlarge: 3.4,
+);
+
+// Mixins
+@mixin add-spacing ($position, $size: medium, $type: margin) {
+
+	@each $b,
+	$g in $grid-column-gutter {
+
+		// Moble first - the small breakpoint is the default one
+		@if $b==small {
+			#{$type}-#{$position}: rem-calc($g*map-get($spacing-steps, $size));
+		}
+
+		@else {
+			@include breakpoint ($b) {
+				#{$type}-#{$position}: rem-calc($g*map-get($spacing-steps, $size));
+			}
+		}
+	}
+}
+
+// Gutengerg and content classes
+@each $s,
+$sz in $spacing-steps {
+
+	@each $b,
+	$g in $grid-column-gutter {
+
+		// Moble first - the small breakpoint is the default one
+		@if $b==small {
+			.has-gsp-padding-top-#{$s} {
+				padding-top: rem-calc($g*$sz);
+			}
+
+			.has-gsp-margin-top-#{$s} {
+				margin-top: rem-calc($g*$sz);
+			}
+
+			.has-gsp-padding-bottom-#{$s} {
+				padding-bottom: rem-calc($g*$sz);
+			}
+
+			.has-gsp-margin-bottom-#{$s} {
+				margin-bottom: rem-calc($g*$sz);
+			}
+		}
+
+		@else {
+			@include breakpoint ($b) {
+				.has-gsp-padding-top-#{$s} {
+					padding-top: rem-calc($g*$sz);
+				}
+
+				.has-gsp-margin-top-#{$s} {
+					margin-top: rem-calc($g*$sz);
+				}
+
+				.has-gsp-padding-bottom-#{$s} {
+					padding-bottom: rem-calc($g*$sz);
+				}
+
+				.has-gsp-margin-bottom-#{$s} {
+					margin-bottom: rem-calc($g*$sz);
+				}
+			}
+		}
+	}
+}

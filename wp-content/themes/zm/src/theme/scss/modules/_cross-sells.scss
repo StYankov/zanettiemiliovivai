@@ -1,0 +1,14 @@
+.cross-sells {
+    margin-bottom: 2rem;
+    
+    @include breakpoint(medium) {
+        margin-bottom: 4rem;
+    }
+    
+    h2 {
+        text-transform: uppercase;
+        font-weight: 300;
+        color: $dark;
+        margin-bottom: rem-calc(35);
+    }
+}
